@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restaurant Menu</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+  @keyframes fadein {
+    from{
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to{
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @keyframes slidedown {
+    from{
+      opacity: 0;
+      transform: translateX(-30px);
+    }to{
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+:root{
+  --color:white;
+  --seccolor:black;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#1e1d1d;
+  color:var(--color);
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.header{
+  text-align:center;
+  padding:60px 20px;
+  background: linear-gradient( #1a1a1a, #2a2a2a);
+  border-bottom:1px solid #333;
+}
+
+
+.highlight{
+  font-size:70px;
+  letter-spacing:3px;
+  animation: slidedown 1s ease;
+}
+
+
+.section{
+  margin:80px auto;
+  animation: fadeIn 1s ease;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.main-head1{
+  background:#1a1a1a;
+  padding:30px;
+  border-radius:15px;
+  transition: 0.3s;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+
+.main-head1:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+  transform: translateY(-5px);
+}
+
+.main-head1 h2:hover {
+  background: #bfe3c8;
+  transform: scale(1.02);
+}
+.main-head1 h2{
+transition: 0.3s;
+  text-align:center;
+  font-size:28px;
+  color:black;
+  background:#A8D5B5;
+  padding:15px;
+  margin-bottom:30px;
+
+  clip-path: polygon(
+    0% 5%, 5% 0%, 10% 5%, 15% 0%, 20% 5%, 
+    25% 0%, 30% 5%, 35% 0%, 40% 5%, 
+    45% 0%, 50% 5%, 55% 0%, 60% 5%, 
+    65% 0%, 70% 5%, 75% 0%, 80% 5%, 
+    85% 0%, 90% 5%, 95% 0%, 100% 5%,
+    100% 95%, 95% 100%, 90% 95%, 85% 100%,
+    80% 95%, 75% 100%, 70% 95%, 65% 100%,
+    60% 95%, 55% 100%, 50% 95%, 45% 100%,
+    40% 95%, 35% 100%, 30% 95%, 25% 100%,
+    20% 95%, 15% 100%, 10% 95%, 5% 100%, 0% 95%
+  );
+}
+
+
+.food{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:40px;
+}
+
+
+.item{
+  display:flex;
+  justify-content:space-between;
+  margin:8px 0;
+  border-bottom:1px dotted #444;
+  padding-bottom:5px;
+  transition:  all 0.3s ease;
+}
+
+
+h3{
+  margin-bottom:10px;
+}
+.item span:last-child{
+  font-weight:bold;
+  color:#A8D5B5;
+}
+
+
+.item:hover {
+  background: rgba(168, 213, 181, 0.15);
+  padding-left: 10px;
+  border-radius: 15px;
+}
+.tagline{
+  margin-top:10px;
+  font-size:18px;
+  color:#ccc;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <p>RESTAURANT</p>
+  <span class="highlight">MENU</span>
+  <p class="tagline">Delicious food. Perfect vibes.</p>
+</div>
+
+<!-- STARTER -->
+<div class="section">
+  <div class="main-head1">
+    <h2>🍽️ STARTERS</h2>
+    <div class="food">
+
+      <div>
+        <h3>🟢 VEG</h3>
+        <div class="item"><span>PANEER 65</span><span>₹150</span></div>
+        <div class="item"><span>GOBI 65</span><span>₹120</span></div>
+        <div class="item"><span>MUSHROOM FRY</span><span>₹130</span></div>
+        <div class="item"><span>BABY CORN</span><span>₹150</span></div>
+        <div class="item"><span>VEG SPRING ROLL</span><span>₹140</span></div>
+        <div class="item"><span>PANEER TIKKA</span><span>₹199</span></div>
+        <div class="item"><span>HONEY CHILLI POTATO</span><span>₹150</span></div>
+      </div>
+
+      <div>
+        <h3>🔴 NON-VEG</h3>
+        <div class="item"><span>TANDOORI KEBAB</span><span>₹199</span></div>
+        <div class="item"><span>RESHMI KEBAB</span><span>₹199</span></div>
+        <div class="item"><span>CHICKEN 65</span><span>₹199</span></div>
+        <div class="item"><span>CRISPY PRAWN</span><span>₹299</span></div>
+        <div class="item"><span>CHICKEN LOLLYPOP</span><span>₹249</span></div>
+        <div class="item"><span>FISH FINGER</span><span>₹299</span></div>
+        <div class="item"><span>CHICKEN WINGS</span><span>₹199</span></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- MAIN COURSE -->
+<div class="section">
+  <div class="main-head1">
+    <h2>🍛 MAIN COURSE</h2>
+    <div class="food">
+
+      <div>
+        <h3>🟢 VEG</h3>
+        <div class="item"><span>PANEER BUTTER MASALA</span><span>₹279</span></div>
+        <div class="item"><span>KADAI PANEER</span><span>₹269</span></div>
+        <div class="item"><span>DAL MAKHANI</span><span>₹229</span></div>
+        <div class="item"><span>SHAHI PANEER</span><span>₹289</span></div>
+        <div class="item"><span>PALAK PANEER</span><span>₹259</span></div>
+        <div class="item"><span>MIX VEG</span><span>₹199</span></div>
+        <div class="item"><span>VEG KOFTA</span><span>₹249</span></div>
+        <div class="item"><span>CHANA MASALA</span><span>₹199</span></div>
+      </div>
+
+      <div>
+        <h3>🔴 NON-VEG</h3>
+        <div class="item"><span>BUTTER CHICKEN</span><span>₹349</span></div>
+        <div class="item"><span>CHICKEN BIRYANI</span><span>₹299</span></div>
+        <div class="item"><span>MUTTON BIRYANI</span><span>₹399</span></div>
+        <div class="item"><span>CHICKEN CURRY</span><span>₹299</span></div>
+        <div class="item"><span>CHICKEN HANDI</span><span>₹329</span></div>
+        <div class="item"><span>EGG CURRY</span><span>₹199</span></div>
+        <div class="item"><span>MUTTON CURRY</span><span>₹399</span></div>
+        <div class="item"><span>FISH CURRY</span><span>₹349</span></div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- DRINKS -->
+<div class="section">
+  <div class="main-head1">
+    <h2>🥤 DRINKS</h2>
+    <div class="food">
+
+      <div>
+        <h3>COLD DRINKS</h3>
+        <div class="item"><span>COKE</span><span>₹99</span></div>
+        <div class="item"><span>SPRITE</span><span>₹99</span></div>
+        <div class="item"><span>FRESH LIME</span><span>₹120</span></div>
+        <div class="item"><span>RED BULL</span><span>₹150</span></div>
+        <div class="item"><span>COLD COFFEE</span><span>₹180</span></div>
+        <div class="item"><span>MANGO SHAKE</span><span>₹160</span></div>
+        <div class="item"><span>BANANA SHAKE</span><span>₹150</span></div>
+        <div class="item"><span>OREO SHAKE</span><span>₹190</span></div>
+      </div>
+
+      <div>
+        <h3>HOT DRINKS</h3>
+        <div class="item"><span>COFFEE</span><span>₹150</span></div>
+        <div class="item"><span>TEA</span><span>₹100</span></div>
+        <div class="item"><span>HOT CHOCOLATE</span><span>₹180</span></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- DESSERT -->
+<div class="section">
+  <div class="main-head1">
+    <h2>🍨 DESSERTS</h2>
+    <div class="food">
+
+      <div>
+        <h3>SWEETS</h3>
+        <div class="item"><span>GULAB JAMUN</span><span>₹120</span></div>
+        <div class="item"><span>RASGULLA</span><span>₹110</span></div>
+        <div class="item"><span>BROWNIE</span><span>₹150</span></div>
+      </div>
+
+      <div>
+        <h3>ICE CREAM</h3>
+        <div class="item"><span>VANILLA</span><span>₹90</span></div>
+        <div class="item"><span>CHOCOLATE</span><span>₹120</span></div>
+        <div class="item"><span>BUTTERSCOTCH</span><span>₹130</span></div>
+        <div class="item"><span>ICE CREAM SUNDAE</span><span>₹180</span></div>
+        <div class="item"><span>CHOCOLATE LAVA CAKE</span><span>₹150</span></div>
+        <div class="item"><span>CHEESECAKE</span><span>₹220</span></div>
+        <div class="item"><span>KULFI</span><span>₹120</span></div>
+        <div class="item"><span>FALOODA</span><span>₹160</span></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
